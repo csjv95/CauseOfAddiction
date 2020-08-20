@@ -1,0 +1,29 @@
+.board__title {
+  text-align: center;
+  padding: 2%;
+}
+
+.table__board {
+  font-size: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2px;
+  text-align: center;
+  border-top:1px solid black; 
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.name {
+  width: 45%;
+}
+
+.board__btn {
+  margin-left: 80%;
+  margin-top: 1%;
+  font-size: 16px;
+}

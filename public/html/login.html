@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="./login.css">
+  <link rel="stylesheet" href="./default.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="./login.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav">
+        <!-- <li><button></button></li>
+        <li><button></button></li> -->
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <img src="./imgs/logo.png" alt="logo" class="logo">
+    <h1 class="login__title">login</h1>
+  <form action="post" class="form__login">
+    <fieldset class="fieldset__login">
+
+      <label for="id" class="login__id">ID</label>
+      <input type="text" id="id">
+    
+      <label for="pw" class="login__pw">PW</label>
+      <input type="password" id="pw">
+
+      <button class="login__btn">로그인</button>
+
+      <div class="check__box">
+        <div class="check__left">
+          <label>
+            <input type="checkbox" class="login__status"><span class="login__status">로그인 상태유지</span> 
+          </label>
+        </div>
+
+        <div class="check__right">
+          <button class="check__btn">비밀번호 찾기</button>
+          <button class="check__btn">회원가입</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</main>
+
+<footer>
+ CopyRight By OOO
+</footer>
+</body>
+</html>

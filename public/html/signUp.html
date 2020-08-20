@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>signUp</title>
+  <link rel="stylesheet" href="signUp.css">
+  <link rel="stylesheet" href="./default.css">
+</head>
+<body>
+  <header></header>
+  <main>
+    <h1 class="signup__title">회원가입</h1>
+    <form action="post" class="form__signup">
+      <fieldset class="fieldset__signup">
+  
+        <label for="id" class="signup__id">아이디</label>
+        <input type="text" id="id">
+         
+        <label for="pw" class="signup__pw">비밀번호</label>
+        <input type="password" id="pw">
+
+        <label for="check__pw" class="check__pw">비밀번호 확인</label>
+        <input type="password" id="pw">
+        
+        <label for="email" class="signup__email">이메일</label>
+        <div class="email__container">
+          <input type="text" id="email"> @ 
+          <select name="email__select" id="email__select">
+            <option value="naver">naver.com</option>
+            <option value="google">google.com</option>
+            <option value="daum">daum.com</option>
+            <option value="daum">nate.com</option>
+          </select>
+      </div>
+        <button class="signu__btn">가입하기</button>
+      </fieldset>
+    </form>
+  </main>
+  <footer></footer>
+</body>
+</html>

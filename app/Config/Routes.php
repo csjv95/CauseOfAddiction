@@ -33,7 +33,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->match(['get', 'post'], 'news/create', 'News::create');
 $routes->get('news/(:segment)', 'News::view/$1');
-$routes->get('news', 'News::index');
+$routes->get('list', 'News::index');
 $routes->get('(:any)', 'Pages::view/$1');
 
 /**
