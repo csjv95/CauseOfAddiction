@@ -35,6 +35,9 @@ $routes->match(['get', 'post'], 'news/create', 'News::create');
 $routes->get('news/(:segment)', 'News::view/$1');
 $routes->get('list', 'News::index');
 $routes->get('login', 'User::login');
+$routes->get('signUp', 'User::signUp');
+$routes->get('idCheck/(:segment)', 'User::idCheck/$1');
+$routes->get('idCheck', 'User::idCheck/$1');
 $routes->get('join', 'User::join');
 $routes->get('(:any)', 'Pages::view/$1');
 

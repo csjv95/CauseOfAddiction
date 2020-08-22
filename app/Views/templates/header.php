@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>  
+  <title><?=$title?></title>  
 <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet"> -->
 	<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-	
-	<link rel="stylesheet" href="/CSS/login.css">
+	<?php
+		foreach ($css as $css_value){
+			echo "<link href='/CSS/{$css_value}.css' rel='stylesheet' type='text/css' media='all' />\n";	 
+		}
+	?>	
 	<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<?php 
+		foreach ($javascript as $javascript_value){
+			echo "<script type='text/javascript' src='/JS/{$javascript_value}.js'></script>\n";
+		}
+	?>
 </head>
 <body>
