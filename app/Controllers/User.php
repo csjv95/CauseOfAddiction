@@ -48,4 +48,7 @@ class User extends Controller
 
 	}
 
+	public function save(){
+		return redirect()->to('/login');
+	}
 }

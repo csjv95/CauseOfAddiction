@@ -1,5 +1,6 @@
 $(document).ready( function(){ 	
 
+	//아이디 체크 
 	$("#id").blur(function() {
 
 		var idJ = /^[a-z]+[a-z0-9]{5,19}$/g;
@@ -11,14 +12,11 @@ $(document).ready( function(){
 			type : 'get',
 			success : function(data) {
 				if (data == '중복') {
-						// 1 : 아이디가 중복되는 문구
 						$("#id_check").text("사용중인 아이디입니다.");
-						$("#id_check").css("color", "red");						
-
+						$("#id_check").css("color", "red");		
 					} else if (data == '중복되지않음'){
-
-						if(idJ.test(String(user_id))){
-							// 0 : 아이디 길이 / 문자열 검사
+						if(idJ.test(String(user_id))){		
+							//성공					
 							$("#id_check").text("");							
 						} else if(user_id == ""){
 							$('#id_check').text('아이디를 입력해주세요 :)');
@@ -34,6 +32,7 @@ $(document).ready( function(){
 		});
 	});
 
+	//패스워드 체크
 	$('#password2').blur(function(){
 
 		var password1=$("#password1").val();
@@ -48,8 +47,34 @@ $(document).ready( function(){
 	          	$('#password2').focus();
 	       }
 	    }else{
+	    	//성공
 	    	$("#password_check").text("");
 	    }
+	});  
+
+	//이메일 체크
+	$('#email').blur(function(){
+		var obEmail = document.getElementById("email");
+		var reg_email = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+
+		if (!obEmail.value) {           
+			$('#email_check').text('이메일을 입력해주세요. :)');
+			$('#email_check').css('color', 'red');	
+		}  else if(!reg_email.test(obEmail.value))  {      
+			$('#email_check').text('이메일 형식이 잘못되었습니다 :)');
+			$('#email_check').css('color', 'red');      
+		}else{
+			//성공
+			$('#email_check').text("");
+		}    
+
 	});
 
+	//리캡차 V3
+	grecaptcha.ready(function() {
+		  grecaptcha.execute('6Lc2QsIZAAAAAKcXEzdJuLd6zfmFVPR3FhSvBJtl', {action: 'homepage'}).then(function(token) {
+		    // 토큰을 받아다가 g-recaptcha 에다가 값을 넣어준다.
+		    document.getElementById('g-recaptcha').value = token;
+	  	});
+	});
 });
